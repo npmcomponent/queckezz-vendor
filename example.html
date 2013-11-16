@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>detect vendor</title>
+    <script src='build/build.js'></script>
+  </head>
+  <body>
+    <script>
+      var vendor = require('vendor')
+
+      console.log('vendor : %s', vendor())
+      // returns normal vendor 'webkit'
+
+      console.log('dom : %s', vendor('dom'))
+      // return 'WebKit'
+
+      console.log('js : %s', vendor('js'))
+      // returns 'Webkit'
+
+      console.log('css : %s', vendor('css'))
+      // returns '-webkit-'
+    </script>
+  </body>

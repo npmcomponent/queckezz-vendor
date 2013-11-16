@@ -1,0 +1,10 @@
+{
+  "name": "vendor",
+  "description": "detect vendor prefix for js, dom, css and default on the current browser.",
+  "dependencies": {},
+  "development": {},
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
