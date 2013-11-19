@@ -21,8 +21,7 @@
       var vendor = require('vendor')
 
       console.log('vendor: %s', vendor())
-      // returns either 'webkit', 'ms', 'moz'
-
+      // returns either 'webkit', 'ms' or 'moz'.
     </script>
   </body>
 ```
