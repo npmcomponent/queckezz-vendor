@@ -9,16 +9,8 @@
     <script>
       var vendor = require('vendor')
 
-      console.log('vendor : %s', vendor())
-      // returns normal vendor 'webkit'
+      console.log('vendor: %s', vendor())
+      // returns vendor 'webkit', 'ms', 'moz'
 
-      console.log('dom : %s', vendor('dom'))
-      // return 'WebKit'
-
-      console.log('js : %s', vendor('js'))
-      // returns 'Webkit'
-
-      console.log('css : %s', vendor('css'))
-      // returns '-webkit-'
     </script>
   </body>

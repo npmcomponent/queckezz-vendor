@@ -5,21 +5,37 @@
 
 module.exports = vendor
 
+/**
+ * Current vendor.
+ */
+
+var curr
+
+/**
+ * Root el.
+ */
+
+var root = document.documentElement
+
+/**
+ * Get computed styles.
+ */
+
+var styles = window.getComputedStyle(root, '')
+
 /*
  * Get current used browser vendor.
  *
- * @param {String} env
  * @api public
  */
 
-function vendor (env) {
-  var styles = window.getComputedStyle(document.documentElement, '')
-  var occurences = Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/)
-  var dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + occurences[1] + ')', 'i'))[1];
-  var js = occurences[1][0].toUpperCase() + occurences[1].substr(1)
+function vendor () {
+  if(curr) return curr;
 
-  if (env === 'js') return js;
-  if (env === 'dom') return dom;
-  if (env === 'css') return occurences[0];
-  return occurences[1]
+  curr = (Array.prototype
+    .slice.call(styles)
+    .join('')
+    .match(/-(moz|webkit|ms)-/))[1]
+
+  return curr
 }
