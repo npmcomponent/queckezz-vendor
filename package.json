@@ -1,0 +1,7 @@
+{
+  "name": "queckezz-vendor",
+  "description": "detect vendor prefix for js, dom, css and default on the current browser.",
+  "version": "0.0.2",
+  "main": "index.js",
+  "dependencies": {}
+}
